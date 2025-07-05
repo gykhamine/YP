@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nos Produits – Youba Phone</title>
+
+  <!-- Google Fonts & Bootstrap -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0a0a0a;
+      color: #f5f5f5;
+    }
+
+    .navbar {
+      background-color: #000;
+      box-shadow: 0 0 15px rgba(13, 110, 253, 0.5);
+    }
+
+    .navbar-brand, .nav-link {
+      color: #0d6efd !important;
+      font-weight: 600;
+    }
+
+    header {
+      background: linear-gradient(to right, #000 40%, #0d6efd 100%);
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    .product-card {
+      background-color: #1e1e1e;
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(13, 110, 253, 0.4);
+    }
+
+    .product-card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .btn-buy {
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      transition: 0.3s ease;
+    }
+
+    .btn-buy:hover {
+      background-color: #0b5ed7;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #000;
+      color: #999;
+      padding: 30px 0;
+      text-align: center;
+      box-shadow: 0 -5px 15px rgba(13, 110, 253, 0.4);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">📱 Youba Phone</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Produits</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#pourquoi">Pourquoi nous ?</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <h1 class="display-5 fw-bold">Nos Produits</h1>
+    <p class="lead">Téléphones, ordinateurs, accessoires… la technologie à portée de main à Oyo 🇨🇬</p>
+  </div>
+</header>
+
+<!-- PRODUITS GRID -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      
+      <!-- Produit 1 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://via.placeholder.com/400x200?text=Smartphone+Galaxy+Y1" class="card-img-top" alt="Smartphone Galaxy Y1">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Smartphone Galaxy Y1</h5>
+            <p class="card-text text-light">Écran HD, batterie longue durée, parfait pour WhatsApp et navigation.</p>
+            <button class="btn btn-buy">Commander</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produit 2 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://via.placeholder.com/400x200?text=Ordinateur+Youba+Book+14" class="card-img-top" alt="Laptop">
+          <div class="card-body">
+            <h5 class="card-title text-primary">YoubaBook 14"</h5>
+            <p class="card-text text-light">Ultra-portable et puissant pour étudiants et professionnels.</p>
+            <button class="btn btn-buy">Commander</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produit 3 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://via.placeholder.com/400x200?text=Casque+Bluetooth+Pro" class="card-img-top" alt="Casque Bluetooth">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Casque Bluetooth Pro</h5>
+            <p class="card-text text-light">Son immersif, micro intégré, idéal pour appels et musique.</p>
+            <button class="btn btn-buy">Commander</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ajoute plus de produits ici si besoin -->
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p class="mb-1">📍 Quartier Centre Ville, Oyo – République du Congo</p>
+    <p class="mb-1">☎ +242 06 123 45 67 | ✉ contact@youbaphone.cg</p>
+    <p class="small mt-3">© 2025 Youba Phone. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
