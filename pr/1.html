@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Téléphones – Youba Services</title>
+  <title>Téléphones & Smartwatches – Youba Services</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
@@ -33,6 +33,20 @@
       text-shadow: 1px 1px 5px #000;
     }
 
+    .brand-section {
+        margin-bottom: 3rem;
+        padding-top: 1rem;
+    }
+
+    .brand-section h2 {
+        color: #0d6efd;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        text-align: center;
+        border-bottom: 2px solid rgba(13, 110, 253, 0.3);
+        padding-bottom: 0.5rem;
+    }
+
     .product-card {
       background-color: #1e1e1e;
       border: none;
@@ -40,6 +54,9 @@
       overflow: hidden;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%; /* Ensure cards in a row have equal height */
+      display: flex;
+      flex-direction: column;
     }
 
     .product-card:hover {
@@ -49,7 +66,19 @@
 
     .product-card img {
       height: 200px;
-      object-fit: cover;
+      object-fit: contain; /* Changed to 'contain' for phones */
+      padding: 15px; /* Add some padding around the image */
+      background-color: #2a2a2a; /* Slightly lighter background for the image area */
+    }
+
+    .product-card .card-body {
+        flex-grow: 1; /* Allow card body to expand */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-card .card-text {
+        flex-grow: 1; /* Allow description to take up available space */
     }
 
     .btn-details {
@@ -57,6 +86,8 @@
       color: white;
       border: none;
       transition: 0.3s ease;
+      width: 100%; /* Make button full width */
+      margin-top: auto; /* Push button to the bottom */
     }
 
     .btn-details:hover {
@@ -70,6 +101,7 @@
       padding: 30px 0;
       text-align: center;
       box-shadow: 0 -5px 15px rgba(13, 110, 253, 0.4);
+      margin-top: 50px;
     }
   </style>
 </head>
@@ -79,7 +111,7 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand" href="1.html">📱 Youba Services</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -95,75 +127,754 @@
 
 <header>
   <div class="container">
-    <h1 class="display-5 fw-bold">Nos Téléphones</h1>
-    <p class="lead">Découvrez notre sélection de smartphones neufs et reconditionnés de qualité.</p>
+    <h1 class="display-5 fw-bold">Nos Téléphones & Smartwatches</h1>
+    <p class="lead">Découvrez notre vaste sélection de smartphones et montres connectées pour tous les besoins et tous les budgets.</p>
   </div>
 </header>
 
 <section class="py-5">
   <div class="container">
-    <div class="row g-4">
-      
-      <div class="col-md-4">
-        <div class="card product-card">
-          <img src="statics/pho/s21.jpg" class="card-img-top" alt="Smartphone Samsung Galaxy S21">
-          <div class="card-body">
-            <h5 class="card-title text-primary">Samsung Galaxy S21</h5>
-            <p class="card-text text-light">
-              Un smartphone puissant avec un écran AMOLED exceptionnel, un appareil photo polyvalent et une batterie longue durée. Idéal pour le gaming et la création de contenu.
-            </p>
-            <ul class="list-unstyled text-secondary small">
-              <li>• Écran: 6.2" Dynamic AMOLED 2X</li>
-              <li>• Caméra: Triple capteur (64MP, 12MP, 12MP)</li>
-              <li>• Stockage: 128 Go / 256 Go</li>
-              <li>• Batterie: 4000 mAh</li>
-            </ul>
-            <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+
+    <div class="brand-section">
+      <h2>Apple iPhone</h2>
+      <div class="row g-4">
+        
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=iPhone+XR+64GB" class="card-img-top" alt="iPhone XR 64GB">
+            <div class="card-body">
+              <h5 class="card-title text-primary">iPhone XR - 64 Go</h5>
+              <p class="card-text text-light">Un excellent rapport qualité-prix pour un iPhone moderne avec de bonnes performances et une excellente autonomie.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran Liquid Retina, Puce A12 Bionic</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="card product-card">
-          <img src="statics/pho/iphone13.jpg" class="card-img-top" alt="iPhone 13">
-          <div class="card-body">
-            <h5 class="card-title text-primary">iPhone 13</h5>
-            <p class="card-text text-light">
-              Design élégant, puce A15 Bionic ultra-rapide, et système de double appareil photo avancé pour des photos et vidéos époustouflantes.
-            </p>
-            <ul class="list-unstyled text-secondary small">
-              <li>• Écran: 6.1" Super Retina XDR</li>
-              <li>• Caméra: Double 12MP (Grand-angle, Ultra grand-angle)</li>
-              <li>• Stockage: 128 Go / 256 Go / 512 Go</li>
-              <li>• Batterie: Autonomie améliorée</li>
-            </ul>
-            <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=iPhone+XR+128GB" class="card-img-top" alt="iPhone XR 128GB">
+            <div class="card-body">
+              <h5 class="card-title text-primary">iPhone XR - 128 Go</h5>
+              <p class="card-text text-light">La version 128 Go offre plus d'espace pour toutes vos photos et applications sans compromis sur la performance.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran Liquid Retina, Puce A12 Bionic</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="card product-card">
-          <img src="statics/pho/xiaomi12.jpg" class="card-img-top" alt="Xiaomi 12">
-          <div class="card-body">
-            <h5 class="card-title text-primary">Xiaomi 12</h5>
-            <p class="card-text text-light">
-              Un excellent rapport qualité-prix avec des performances de pointe, une charge rapide et un écran fluide. Parfait pour les utilisateurs exigeants.
-            </p>
-            <ul class="list-unstyled text-secondary small">
-              <li>• Écran: 6.28" AMOLED 120Hz</li>
-              <li>• Caméra: Triple (50MP, 13MP, 5MP)</li>
-              <li>• Stockage: 128 Go / 256 Go</li>
-              <li>• Batterie: 4500 mAh avec charge 67W</li>
-            </ul>
-            <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=iPhone+11+64GB" class="card-img-top" alt="iPhone 11 64GB">
+            <div class="card-body">
+              <h5 class="card-title text-primary">iPhone 11 - 64 Go</h5>
+              <p class="card-text text-light">Des performances solides et un excellent système de double caméra, idéal pour la photographie et la vidéo.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Puce A13 Bionic, Mode Nuit, Deep Fusion</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      </div>
-  </div>
-</section>
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=iPhone+11+Pro+Max+64GB" class="card-img-top" alt="iPhone 11 Pro Max 64GB">
+            <div class="card-body">
+              <h5 class="card-title text-primary">iPhone 11 Pro Max - 64 Go</h5>
+              <p class="card-text text-light">Un écran Super Retina XDR magnifique et un système de triple caméra professionnel pour des clichés incroyables.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran OLED, Puce A13 Bionic, Triple Caméra</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=iPhone+11+Pro+Max+128GB" class="card-img-top" alt="iPhone 11 Pro Max 128GB">
+            <div class="card-body">
+              <h5 class="card-title text-primary">iPhone 11 Pro Max - 128 Go</h5>
+              <p class="card-text text-light">Profitez des mêmes performances professionnelles avec plus d'espace pour vos fichiers et applications gourmandes.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran OLED, Puce A13 Bionic, Triple Caméra</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=iPhone+11+Pro+Max+256GB" class="card-img-top" alt="iPhone 11 Pro Max 256GB">
+            <div class="card-body">
+              <h5 class="card-title text-primary">iPhone 11 Pro Max - 256 Go</h5>
+              <p class="card-text text-light">Le summum de la gamme 11 Pro Max, offrant un stockage étendu pour tous vos besoins de création de contenu.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran OLED, Puce A13 Bionic, Triple Caméra</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=iPhone+12" class="card-img-top" alt="iPhone 12">
+            <div class="card-body">
+              <h5 class="card-title text-primary">iPhone 12</h5>
+              <p class="card-text text-light">Le premier iPhone avec 5G, un design moderne, un écran Super Retina XDR et des performances rapides grâce à la puce A14 Bionic.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran OLED, 5G, Puce A14 Bionic</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=iPhone+12+Pro+Max+128GB" class="card-img-top" alt="iPhone 12 Pro Max 128GB">
+            <div class="card-body">
+              <h5 class="card-title text-primary">iPhone 12 Pro Max - 128 Go</h5>
+              <p class="card-text text-light">Grand écran, excellentes capacités photo et vidéo, et la puissance de la puce A14 Bionic pour une expérience premium.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran OLED, 5G, Scanner LiDAR, Puce A14 Bionic</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=iPhone+12+Pro+Max+256GB" class="card-img-top" alt="iPhone 12 Pro Max 256GB">
+            <div class="card-body">
+              <h5 class="card-title text-primary">iPhone 12 Pro Max - 256 Go</h5>
+              <p class="card-text text-light">Le même design et les mêmes performances exceptionnelles avec un stockage doublé pour tous vos besoins.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran OLED, 5G, Scanner LiDAR, Puce A14 Bionic</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=iPhone+13+128GB" class="card-img-top" alt="iPhone 13 128GB">
+            <div class="card-body">
+              <h5 class="card-title text-primary">iPhone 13 - 128 Go</h5>
+              <p class="card-text text-light">Une puce A15 Bionic ultra-rapide, un système de double caméra avancé et une autonomie améliorée pour le quotidien.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Puce A15 Bionic, Mode Cinématique, Batterie améliorée</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=iPhone+13+Pro+Max+128GB" class="card-img-top" alt="iPhone 13 Pro Max 128GB">
+            <div class="card-body">
+              <h5 class="card-title text-primary">iPhone 13 Pro Max - 128 Go</h5>
+              <p class="card-text text-light">L'écran ProMotion 120Hz et des capacités photo/vidéo encore plus poussées font de ce modèle un choix pour les pros.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran ProMotion 120Hz, Puce A15 Bionic, Mode Cinématique Pro</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=iPhone+14+128GB" class="card-img-top" alt="iPhone 14 128GB">
+            <div class="card-body">
+              <h5 class="card-title text-primary">iPhone 14 - 128 Go</h5>
+              <p class="card-text text-light">Fonctionnalités de sécurité avancées, détection d'accident, et des améliorations significatives en photographie grâce au Photonic Engine.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Détection d'accident, Photonic Engine, Puce A15 Bionic (améliorée)</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=iPhone+14+Pro+256GB" class="card-img-top" alt="iPhone 14 Pro 256GB">
+            <div class="card-body">
+              <h5 class="card-title text-primary">iPhone 14 Pro - 256 Go</h5>
+              <p class="card-text text-light">Introduit l'innovante Dynamic Island, un écran Always-On et une caméra principale de 48 MP pour des détails inégalés.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Dynamic Island, Caméra 48MP, Puce A16 Bionic</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=iPhone+14+Pro+Max+256GB" class="card-img-top" alt="iPhone 14 Pro Max 256GB">
+            <div class="card-body">
+              <h5 class="card-title text-primary">iPhone 14 Pro Max - 256 Go</h5>
+              <p class="card-text text-light">Le plus grand et le plus puissant des iPhone 14, avec toutes les fonctionnalités Pro et une autonomie exceptionnelle.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Dynamic Island, Caméra 48MP, Puce A16 Bionic</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=iPhone+15+Pro+Max+256GB" class="card-img-top" alt="iPhone 15 Pro Max 256GB">
+            <div class="card-body">
+              <h5 class="card-title text-primary">iPhone 15 Pro Max - 256 Go</h5>
+              <p class="card-text text-light">Le fleuron actuel d'Apple, avec un châssis en titane, le bouton Action personnalisable, et la puce A17 Pro révolutionnaire.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Titane, Bouton Action, USB-C, Puce A17 Pro, Zoom optique 5x</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+      </div></div><div class="brand-section">
+      <h2>Samsung Galaxy</h2>
+      <div class="row g-4">
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=Samsung+A05s" class="card-img-top" alt="Samsung A05s">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Samsung Galaxy A05s</h5>
+              <p class="card-text text-light">Un smartphone d'entrée de gamme fiable avec un grand écran et une bonne autonomie pour les usages essentiels.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran Full HD+, Batterie 5000 mAh</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=Samsung+A26" class="card-img-top" alt="Samsung A26">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Samsung Galaxy A26</h5>
+              <p class="card-text text-light">Un modèle récent de la série A, offrant un équilibre entre fonctionnalités modernes et prix abordable.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran AMOLED, design élégant</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=Samsung+A34" class="card-img-top" alt="Samsung A34">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Samsung Galaxy A34</h5>
+              <p class="card-text text-light">Un milieu de gamme très populaire, doté d'un bel écran AMOLED 120Hz et d'une résistance à l'eau et à la poussière IP67.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran AMOLED 120Hz, IP67, 5G</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=Samsung+A35" class="card-img-top" alt="Samsung A35">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Samsung Galaxy A35</h5>
+              <p class="card-text text-light">Le successeur du A34, avec des performances améliorées, un design raffiné et une expérience utilisateur fluide.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran Super AMOLED, Exynos 1380, IP67</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=Samsung+A56" class="card-img-top" alt="Samsung A56">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Samsung Galaxy A56</h5>
+              <p class="card-text text-light">Un smartphone milieu de gamme avancé, combinant un excellent écran, de bonnes capacités photo et une batterie durable.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran Super AMOLED, 5G, Caméra polyvalente</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=Samsung+Z+Fold" class="card-img-top" alt="Samsung Z Fold">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Samsung Galaxy Z Fold</h5>
+              <p class="card-text text-light">Le téléphone qui se transforme en tablette, offrant une productivité maximale et une expérience multimédia immersive.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran pliable, Multitâche, S Pen (selon modèle)</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=Samsung+Z+Flip" class="card-img-top" alt="Samsung Z Flip">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Samsung Galaxy Z Flip</h5>
+              <p class="card-text text-light">Compact et élégant, le Z Flip se plie pour tenir facilement dans votre poche, alliant style et technologie avancée.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Design pliable, Écran externe, Appareil photo polyvalent</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=Samsung+S24+Ultra" class="card-img-top" alt="Samsung S24 Ultra">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Samsung Galaxy S24 Ultra</h5>
+              <p class="card-text text-light">Le fleuron de Samsung, doté d'un appareil photo de pointe, des capacités IA révolutionnaires et du S Pen intégré.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Caméra 200MP, IA Galaxy, S Pen, Snapdragon 8 Gen 3</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=Samsung+S25+Ultra" class="card-img-top" alt="Samsung S25 Ultra">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Samsung Galaxy S25 Ultra</h5>
+              <p class="card-text text-light">Le futur du smartphone Samsung. Attendez-vous à des innovations majeures en termes de performances, d'IA et de photographie.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Modèle futur (informations à venir)</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=Samsung+F16" class="card-img-top" alt="Samsung F16">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Samsung Galaxy F16</h5>
+              <p class="card-text text-light">Modèle de la série F, généralement axé sur une grande batterie et de solides performances pour le divertissement.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: (Spécifications exactes non confirmées)</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=Samsung+M16" class="card-img-top" alt="Samsung M16">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Samsung Galaxy M16</h5>
+              <p class="card-text text-light">Membre de la série M, reconnue pour ses batteries massives et sa grande autonomie, idéale pour les utilisateurs intensifs.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: (Spécifications exactes non confirmées)</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/0d6efd/FFFFFF?text=Samsung+M35" class="card-img-top" alt="Samsung M35">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Samsung Galaxy M35</h5>
+              <p class="card-text text-light">Un excellent compromis entre autonomie, performances et un écran de qualité, parfait pour le quotidien.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran Super AMOLED, Batterie 6000mAh</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+      </div></div><div class="brand-section">
+      <h2>Xiaomi Redmi</h2>
+      <div class="row g-4">
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/dc3545/FFFFFF?text=Redmi+A03" class="card-img-top" alt="REDMI A03">
+            <div class="card-body">
+              <h5 class="card-title text-primary">REDMI A03</h5>
+              <p class="card-text text-light">Un smartphone d'entrée de gamme très abordable, idéal pour les usages basiques et comme premier téléphone.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Grand écran, Batterie 5000 mAh</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/dc3545/FFFFFF?text=Redmi+13C" class="card-img-top" alt="REDMI 13C">
+            <div class="card-body">
+              <h5 class="card-title text-primary">REDMI 13C</h5>
+              <p class="card-text text-light">Un téléphone équilibré et très compétitif, parfait pour un usage quotidien avec un écran fluide et une bonne autonomie.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran 90Hz, Caméra 50MP, Batterie 5000 mAh</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/dc3545/FFFFFF?text=Redmi+14C" class="card-img-top" alt="REDMI 14C">
+            <div class="card-body">
+              <h5 class="card-title text-primary">REDMI 14C</h5>
+              <p class="card-text text-light">Le prochain modèle d'entrée de gamme de Redmi, offrant les dernières fonctionnalités à un prix très accessible.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: (Informations à venir, modèle futur)</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/dc3545/FFFFFF?text=Redmi+Note+13" class="card-img-top" alt="REDMI Note 13">
+            <div class="card-body">
+              <h5 class="card-title text-primary">REDMI Note 13</h5>
+              <p class="card-text text-light">Un excellent smartphone de milieu de gamme avec un écran AMOLED 120Hz, une bonne caméra et une batterie durable.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Écran AMOLED 120Hz, Caméra 108MP, Batterie 5000 mAh</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/dc3545/FFFFFF?text=Redmi+Note+13+Pro%2B" class="card-img-top" alt="REDMI Note 13 Pro+">
+            <div class="card-body">
+              <h5 class="card-title text-primary">REDMI Note 13 Pro+</h5>
+              <p class="card-text text-light">Le summum de la série Note 13, avec une caméra de 200 MP, une charge ultra-rapide et une résistance à l'eau IP68.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: Caméra 200MP OIS, Charge 120W, IP68, Écran AMOLED 120Hz</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/dc3545/FFFFFF?text=Redmi+Note+14+Pro" class="card-img-top" alt="REDMI Note 14 Pro">
+            <div class="card-body">
+              <h5 class="card-title text-primary">REDMI Note 14 Pro</h5>
+              <p class="card-text text-light">Le prochain modèle phare de Redmi, promettant des performances améliorées et une expérience utilisateur de premier ordre.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: (Informations à venir, modèle futur)</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/dc3545/FFFFFF?text=Redmi+Note+14+Pro%2B" class="card-img-top" alt="REDMI Note 14 Pro+">
+            <div class="card-body">
+              <h5 class="card-title text-primary">REDMI Note 14 Pro+</h5>
+              <p class="card-text text-light">La version la plus avancée du Note 14, avec des spécifications haut de gamme et des technologies de pointe.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Qualité: (Informations à venir, modèle futur)</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+      </div></div><div class="brand-section">
+      <h2>HAFURY</h2>
+      <div class="row g-4">
+        
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/17a2b8/FFFFFF?text=HAFURY+V1" class="card-img-top" alt="HAFURY V1">
+            <div class="card-body">
+              <h5 class="card-title text-primary">HAFURY V1</h5>
+              <p class="card-text text-light">Un smartphone avec des spécifications solides pour un usage quotidien, idéal pour la productivité et le divertissement.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Mémoire: 8 Go RAM + 256 Go ROM</li>
+                <li>• Qualité: Grand écran FHD+, Caméra 64MP</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/17a2b8/FFFFFF?text=HAFURY+MEET" class="card-img-top" alt="HAFURY MEET">
+            <div class="card-body">
+              <h5 class="card-title text-primary">HAFURY MEET</h5>
+              <p class="card-text text-light">Doté d'une grande quantité de RAM et d'un écran OLED, il est parfait pour le multitâche intensif et les jeux.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Mémoire: 12 Go RAM + 256 Go ROM</li>
+                <li>• Qualité: Écran OLED 120Hz, Caméra 100MP, Batterie 5100mAh</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+      </div></div><div class="brand-section">
+      <h2>KINGKONG (Cubot Rugged Phones)</h2>
+      <div class="row g-4">
+        
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/6f42c1/FFFFFF?text=KINGKONG+9" class="card-img-top" alt="KINGKONG 9">
+            <div class="card-body">
+              <h5 class="card-title text-primary">KINGKONG 9</h5>
+              <p class="card-text text-light">Un smartphone robuste avec une batterie colossale, idéal pour l'aventure et les environnements exigeants. Intègre une vision nocturne.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Mémoire: 12 Go RAM + 256 Go ROM</li>
+                <li>• Qualité: Batterie 10600 mAh, Écran 120Hz, Caméra 100MP, Robuste</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/6f42c1/FFFFFF?text=KINGKONG+AX" class="card-img-top" alt="KINGKONG AX">
+            <div class="card-body">
+              <h5 class="card-title text-primary">KINGKONG AX</h5>
+              <p class="card-text text-light">Design robuste avec des performances fluides, parfait pour ceux qui recherchent un téléphone durable au quotidien.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Mémoire: 12 Go RAM + 256 Go ROM</li>
+                <li>• Qualité: Écran 120Hz, 5G, Robuste</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/6f42c1/FFFFFF?text=KINGKONG+ACE3" class="card-img-top" alt="KINGKONG ACE3">
+            <div class="card-body">
+              <h5 class="card-title text-primary">KINGKONG ACE3</h5>
+              <p class="card-text text-light">Un smartphone robuste et abordable, offrant de bonnes performances et une excellente autonomie pour l'extérieur.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Mémoire: 8 Go RAM + 256 Go ROM</li>
+                <li>• Qualité: Robuste, Caméra 100MP, Batterie 5100 mAh</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/6f42c1/FFFFFF?text=KINGKONG+X+5G" class="card-img-top" alt="KINGKONG X/5G">
+            <div class="card-body">
+              <h5 class="card-title text-primary">KINGKONG X/5G</h5>
+              <p class="card-text text-light">Le téléphone robuste par excellence avec la connectivité 5G et une RAM impressionnante pour le multitâche extrême.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Mémoire: 16 Go RAM + 256 Go ROM</li>
+                <li>• Qualité: Robuste, 5G, Écran 120Hz, Batterie 10200 mAh</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/6f42c1/FFFFFF?text=KINGKONG+ES" class="card-img-top" alt="KINGKONG ES">
+            <div class="card-body">
+              <h5 class="card-title text-primary">KINGKONG ES</h5>
+              <p class="card-text text-light">Un téléphone robuste et abordable, idéal pour les utilisateurs qui ont besoin de durabilité sans se ruiner.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Mémoire: 6 Go RAM + 128 Go ROM</li>
+                <li>• Qualité: Robuste, Écran 90Hz, Batterie 5100 mAh</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/6f42c1/FFFFFF?text=KINGKONG+ACE2" class="card-img-top" alt="KINGKONG ACE2">
+            <div class="card-body">
+              <h5 class="card-title text-primary">KINGKONG ACE2</h5>
+              <p class="card-text text-light">Un compagnon durable avec un écran secondaire et une bonne autonomie pour les activités en extérieur.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Mémoire: 6 Go RAM + 128 Go ROM</li>
+                <li>• Qualité: Robuste, Écran secondaire, Batterie 5100 mAh</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/6f42c1/FFFFFF?text=KINGKONG+Power3" class="card-img-top" alt="KINGKONG Power3">
+            <div class="card-body">
+              <h5 class="card-title text-primary">KINGKONG Power3</h5>
+              <p class="card-text text-light">Doté d'une batterie massive, ce téléphone est conçu pour durer des jours, même en utilisation intensive.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Mémoire: 6 Go RAM + 256 Go ROM</li>
+                <li>• Qualité: Batterie 10200 mAh, Écran 120Hz, Caméra 100MP</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/6f42c1/FFFFFF?text=KINGKONG+Start2+5G" class="card-img-top" alt="KINGKONG Start2/5G">
+            <div class="card-body">
+              <h5 class="card-title text-primary">KINGKONG Start2/5G</h5>
+              <p class="card-text text-light">Performances de pointe avec la 5G et une grande RAM, le tout dans un format résistant aux chocs et à l'eau.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Mémoire: 12 Go RAM + 256 Go ROM</li>
+                <li>• Qualité: 5G, Écran 144Hz, Caméra 100MP, Robuste</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/6f42c1/FFFFFF?text=KINGKONG+8+256" class="card-img-top" alt="KINGKONG 8+256">
+            <div class="card-body">
+              <h5 class="card-title text-primary">KINGKONG (8+256)</h5>
+              <p class="card-text text-light">Un modèle KingKong avec un bon équilibre de mémoire et de stockage, offrant la durabilité caractéristique de la marque.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Mémoire: 8 Go RAM + 256 Go ROM</li>
+                <li>• Qualité: Robuste, Bonne autonomie</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+      </div></div><div class="brand-section">
+      <h2>CUBOT (Smartwatches)</h2>
+      <div class="row g-4">
+        
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/ffc107/000000?text=CUBOT+X1" class="card-img-top" alt="CUBOT X1">
+            <div class="card-body">
+              <h5 class="card-title text-primary">CUBOT X1 (Montre Connectée)</h5>
+              <p class="card-text text-light">Une montre connectée robuste avec un grand écran AMOLED et une longue autonomie, parfaite pour le suivi sportif et la santé.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Mémoire: 256 Mo (interne)</li>
+                <li>• Qualité: Écran AMOLED 2.13", Appels Bluetooth, Étanche</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/ffc107/000000?text=CUBOT+C28" class="card-img-top" alt="CUBOT C28">
+            <div class="card-body">
+              <h5 class="card-title text-primary">CUBOT C28 (Montre Connectée)</h5>
+              <p class="card-text text-light">Une montre connectée abordable pour le suivi des activités et les notifications, avec un design simple et fonctionnel.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Mémoire: 128 Mo (interne)</li>
+                <li>• Qualité: Écran 2.02", Suivi Santé, Appels Bluetooth</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/ffc107/000000?text=CUBOT+C29" class="card-img-top" alt="CUBOT C29">
+            <div class="card-body">
+              <h5 class="card-title text-primary">CUBOT C29 (Montre Connectée)</h5>
+              <p class="card-text text-light">Un modèle avec un design attrayant et des fonctionnalités de suivi de la santé essentielles pour le quotidien.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Mémoire: 128 Mo (interne)</li>
+                <li>• Qualité: Design élégant, Suivi de santé</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/ffc107/000000?text=CUBOT+GT1" class="card-img-top" alt="CUBOT GT1">
+            <div class="card-body">
+              <h5 class="card-title text-primary">CUBOT GT1 (Montre Connectée)</h5>
+              <p class="card-text text-light">Idéale pour les sportifs, cette montre offre un suivi GPS précis et est étanche, parfaite pour toutes vos activités.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Mémoire: Non spécifié</li>
+                <li>• Qualité: GPS, Étanche (5 ATM), Écran haute résolution</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/300x200/ffc107/000000?text=CUBOT+U1" class="card-img-top" alt="CUBOT U1">
+            <div class="card-body">
+              <h5 class="card-title text-primary">CUBOT U1 (Montre Connectée)</h5>
+              <p class="card-text text-light">Une montre connectée ultra-abordable pour les fonctions de base, simple d'utilisation et pratique pour les notifications.</p>
+              <ul class="list-unstyled text-secondary small">
+                <li>• Mémoire: 16 Mo (interne)</li>
+                <li>• Qualité: Design compact, Fonctions de base</li>
+              </ul>
+              <a href="4.html" class="btn btn-details">Demander plus d'infos</a>
+            </div>
+          </div>
+        </div>
+
+      </div></div></div></section>
 
 <footer id="contact">
   <div class="container">
