@@ -48,3 +48,17 @@ CUBOT C28-75 AED
 CUBOT C29-85 AED
 CUBOT GT1-116 AED
 CUBOT U1-53 AED
+
+Tecno 
+Spark 30c
+Spark 40
+Pop 10 
+Pop 9
+Common 40
+Infinix smart 10
+Infinix smart 9
+Itel a 90 
+Itel 06
+Itel 20
+Itel city 100
+Itel p70 Itel s 25 ultra
