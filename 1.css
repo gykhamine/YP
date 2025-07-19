@@ -14,7 +14,14 @@
       font-weight: 600;
     }
     .card-text {
-        color: #000000;
+        color: #ffffff;
+
+    }
+    .btn {
+      color: #4dabf7;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;    
 
     }
 
@@ -46,7 +53,7 @@
 
     /* PRODUITS */
     #produits {
-      background-color: #ffffff;
+      background-color: #b3abab;
     }
     .product-card {
       background-color: #ffffff;
@@ -69,18 +76,19 @@
 
     /* SECTION POURQUOI */
     #pourquoi {
-      background-color: #0d0d0d;
+      background-color: #ffffff;
+      color: #000000;
     }
 
     /* FOOTER */
-    footer {
-      background-color: #000;
-      color: #999;
+    #contact {
+      background-color: #ffffff;
+      color: #000000;
       padding: 30px 0;
       text-align: center;
       box-shadow: 0 -5px 15px rgba(13, 110, 253, 0.4);
     }
-        #contact h2 {
+    #contact h2 {
       text-align: center;
       color: #4dabf7;
       font-size: 2rem;
@@ -89,30 +97,30 @@
 
     #contact p {
       font-size: 1.1rem;
-      color: #c2dbf8;
+      color: #000000;
       text-align: center;
       margin: 10px 0;
     }
 
     #contact a {
-      color: #4dabf7;
+      color: #000000;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease;
     }
 
     #contact a:hover {
-      color: #1a8cff;
+      color: #000000;
       text-decoration: underline;
     }
-        .cta-contact {
+    .cta-contact {
       margin-top: 40px;
       text-align: center;
     }
 
     .cta-btn {
       background-color: #0d6efd;
-      color: #fff;
+      color: #000000;
       padding: 14px 30px;
       border-radius: 50px;
       font-size: 1.1rem;
@@ -128,4 +136,10 @@
       background-color: #0b5ed7;
       transform: translateY(-4px);
       box-shadow: 0 8px 20px rgba(13, 110, 253, 0.4);
+    }
+    .text-center {
+      color: #000000;
+    }
+    .ct {
+      color: #000000;
     }
